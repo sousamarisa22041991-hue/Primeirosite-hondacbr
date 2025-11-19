@@ -562,3 +562,37 @@ textarea:focus {
   }
 }
 
+/* Forçar layout em coluna no telemóvel */
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: column;   /* Logo e menu ficam um em baixo do outro */
+    align-items: center;
+    text-align: center;
+  }
+
+  .brand {
+    margin-bottom: 10px;      /* Espaço entre logo e menu */
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;   /* Links em coluna */
+    gap: 8px;                 /* Espaço entre links */
+  }
+
+  .test-ride-banner {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .test-ride-texto h1 {
+    font-size: 1.4em;         /* Título menor */
+  }
+
+  .test-ride-texto p {
+    font-size: 1em;
+    margin: 5px 0;
+  }
+}
+
