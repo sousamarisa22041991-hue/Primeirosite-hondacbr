@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ofertas — Stand Honda</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      background-color: #000;
+      color: #f2f2f2;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .container {
+      flex: 1;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      color: #e60000;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #ccc;
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card.offer {
+      background-color: #1a1a1a;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .card.offer:hover {
+      transform: scale(1.02);
+    }
+
+    .card.offer img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      object-fit: cover;
+    }
+
+    .card.offer h3 {
+      color: #e60000;
+      margin-bottom: 10px;
+    }
+
+    .card.offer p {
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    .btn {
+      background-color: #e60000;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #ff1a1a;
+      transform: scale(1.05);
+    }
+
+    .icon-bar {
+      background-color: #111;
+      display: flex;
+      justify-content: space-around;
+      padding: 12px 0;
+      border-top: 1px solid #333;
+    }
+
+    .icon-bar a {
+      color: #f2f2f2;
+      text-align: center;
+      text-decoration: none;
+      font-size: 12px;
+    }
+
+    .icon-bar a svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+      display: block;
+      margin: 0 auto 4px;
+    }
+
+    .icon-bar a.active {
+      color: #e60000;
+    }
+
+    footer {
+      background-color: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="brand">
+      <a href="index.html">
+        <img src="logo.png" alt="Stand Honda logo" height="36">
+      </a>
+      <strong>Stand Honda</strong>
+    </div>
+    <nav class="nav-links">
+  <a href="index.html">Início</a>
+  <a href="catalogo.html" class="active" aria-current="page">Catálogo</a>
+  <a href="servicos.html">Serviços</a>
+  <a href="ofertas.html">Ofertas</a>
+  <a href="contacto.html">Contacto</a>
+</nav>
+
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="container">
+    <h2>Ofertas especiais</h2>
+    <p class="subtitle">Descontos exclusivos em motos e serviços Honda. Válidos por tempo limitado.</p>
+
+    <section class="grid">
+      <article class="card offer">
+        <img src="revisao.png" alt="Honda NX500 com desconto de inverno">
+        <h3>Honda NX500 — €6.550 campanha inverno</h3>
+        <p>Escolha a NX500 em vermelho, preto ou prata com preço especial. Campanha limitada ao stock existente.</p>
+        <a class="btn" href="contacto.html">Saber mais</a>
+      </article>
+
+      <article class="card offer">
+        <img src="revisao2.jpg" alt="Honda Hornet 750 com oferta Honda Plus">
+        <h3>Hornet 750 — €7.550 com Honda Plus</h3>
+        <p>Inclui extensão de garantia 3+2 anos, Honda Mapit grátis e seguro 0% no 1.º ano para condutores +26 anos.</p>
+        <a class="btn" href="contacto.html">Agendar test‑ride</a>
+      </article>
+    </section>
+  </main>
+
+
+
+<footer>
+  <p>© Honda Portugal · Tel: +351 21 892 85 57</p>
+  <p>Site desenvolvido com dedicação por <strong>Marisa Sousa</strong> — Curso Técnico de Informática</p>
+</footer>

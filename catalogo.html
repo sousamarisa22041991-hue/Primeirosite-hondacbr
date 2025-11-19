@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo — Stand Honda</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const links = document.querySelectorAll('.nav-links a');
+      const current = location.pathname.split('/').pop() || 'index.html';
+      links.forEach(a => {
+        let href = a.getAttribute('href') || '';
+        if (/^(https?:|\/\/|#)/.test(href)) return;
+        if (!/\.html$/.test(href) && href !== '') href = href.replace(/\/?$/, '') + '.html';
+        a.setAttribute('href', href);
+        if (href === current) {
+          a.classList.add('active');
+          a.setAttribute('aria-current','page');
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="brand">
+      <a href="index.html">
+        <img src="logo.png" alt="Stand Honda logo" height="36">
+      </a>
+      <strong>Stand Honda</strong>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Início</a>
+      <a href="catalogo.html" class="active" aria-current="page">Catálogo</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="ofertas.html">Ofertas</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="container">
+  <h2>Catálogo Honda</h2>
+  <p class="subtitle">Seis modelos, seis estilos de vida. Escolhe a mota que te acompanha na estrada e na aventura.</p>
+
+  <!-- História das motas -->
+  <section style="margin-top:40px">
+    <h2>História das motas Honda</h2>
+    <p class="subtitle">Cada modelo tem uma missão. Cada estrada, uma memória. Descobre a alma por trás das máquinas.</p>
+    <p>
+      A Honda CBR Vermelha abriu caminho com estilo e velocidade. A Fireblade elevou o nível com precisão de pista.
+      A versão Preto e Vermelho trouxe agressividade urbana, enquanto a CBR Preto conquistou os minimalistas.
+      A Africa Twin nasceu para explorar o mundo, e a Café Racer para os que vivem com atitude.
+      Seis motas, seis histórias. Qual será a tua?
+    </p>
+  </section>
+
+ 
+ <section class="grid" aria-label="Lista de modelos">
+  <!-- Mota 7 em primeiro -->
+  <article class="card offer">
+    <img src="7-mota.png" alt="Honda CBR500R 2017 Gunpowder Black">
+    <h3>CBR500R 2017 — Gunpowder Black</h3>
+    <p>Estilo furtivo e desempenho equilibrado. A versão 2017 em preto metálico combina elegância com potência urbana.</p>
+    <p><strong>Desde €6.450</strong></p>
+    <a class="btn" href="#">Ver detalhe</a>
+  </article>
+
+  <!-- Restantes motas -->
+  <article class="card offer">
+    <img src="6-mota.jpg" alt="Honda Café Racer">
+    <h3>Café Racer</h3>
+    <p>Estilo vintage com alma moderna. Para quem vive a estrada com personalidade e atitude.</p>
+    <p><strong>Desde €6.500</strong></p>
+    <a class="btn" href="#">Ver detalhe</a>
+  </article>
+
+  <article class="card offer">
+    <img src="3-mota.jpg" alt="Honda CBR Preto e Vermelho">
+    <h3>CBR Preto e Vermelho</h3>
+    <p>Estilo agressivo e engenharia refinada. Uma fusão entre potência e elegância urbana.</p>
+    <p><strong>Desde €8.990</strong></p>
+    <a class="btn" href="#">Ver detalhe</a>
+  </article>
+
+  <article class="card offer">
+    <img src="4-mota.jpg" alt="Honda CBR Preto">
+    <h3>CBR Preto</h3>
+    <p>Minimalista e moderna. Ideal para quem valoriza design limpo e desempenho fiável.</p>
+    <p><strong>Desde €7.800</strong></p>
+    <a class="btn" href="#">Ver detalhe</a>
+  </article>
+
+  <article class="card offer">
+    <img src="2-mota.jpeg" alt="Honda CBR Fireblade">
+    <h3>CBR Fireblade</h3>
+    <p>Potência e precisão para quem vive a estrada como uma pista. Uma verdadeira máquina de performance.</p>
+    <p><strong>Desde €9.750</strong></p>
+    <a class="btn" href="#">Ver detalhe</a>
+  </article>
+
+  <article class="card offer">
+    <img src="8-mota.jpg" alt="Honda CB650R 2023">
+    <h3>CB650R 2023 — Neo Sports Café</h3>
+    <p>Design moderno com alma naked. A CB650R combina potência, estilo urbano e tecnologia de ponta para quem quer presença na estrada.</p>
+    <p><strong>Desde €8.990</strong></p>
+    <a class="btn" href="#">Ver detalhe</a>
+  </article>
+</section>
+</main>
+
+
+
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© Honda Portugal · Tel: +351 21 892 85 57</p>
+    <p>Site desenvolvido com dedicação por <strong>Marisa Sousa</strong> — Curso Técnico de Informática</p>
+  </footer>
+
+</body>
+</html>

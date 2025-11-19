@@ -1,0 +1,62 @@
+/* Reset e base */
+*{box-sizing:border-box;margin:0;padding:0;font-family:Roboto,Arial,Helvetica,sans-serif}
+html,body{height:100%;background:#000;color:#fff}
+a{color:inherit;text-decoration:none}
+
+/* cabeçalho / nav principal */
+.header{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:16px 28px;background:linear-gradient(90deg,#0b0b0b,rgba(0,0,0,0.6));
+  position:sticky;top:0;z-index:900;border-bottom:1px solid rgba(255,255,255,0.03)
+}
+.brand{display:flex;gap:12px;align-items:center}
+.brand img{height:36px}
+.nav-links{display:flex;gap:16px}
+.nav-links a{padding:8px 10px;border-radius:6px;transition:background .15s}
+.nav-links a:hover{background:rgba(255,255,255,0.04)}
+
+/* hero */
+.banner{height:72vh;background:url('mota.png') center/cover no-repeat;display:flex;align-items:center;padding:48px}
+.texto{max-width:800px}
+.subtitle{font-size:16px;opacity:.9;margin-bottom:10px}
+.texto h1{font-size:42px;line-height:1; margin-bottom:12px}
+.lead{font-size:16px;color:#e6e6e6;margin-bottom:18px}
+.btn{background:#e60012;color:#fff;padding:12px 20px;border-radius:8px;border:none;cursor:pointer;display:inline-flex;gap:8px;align-items:center}
+.btn:hover{background:#b8000f;transform:translateY(-2px)}
+
+/* grid de secções */
+.container{max-width:1100px;margin:36px auto;padding:0 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+
+/* cards */
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:16px;border-radius:10px}
+.card h3{margin-bottom:8px}
+
+/* serviços / workshop */
+.service-list{display:flex;flex-direction:column;gap:12px}
+
+/* ofertas */
+.offer{display:flex;gap:12px;align-items:center}
+.offer img{width:120px;height:80px;object-fit:cover;border-radius:8px}
+
+/* contacto */
+.form-row{display:flex;flex-direction:column;gap:8px;margin-bottom:8px}
+.input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.02);color:#fff}
+textarea{min-height:120px;resize:vertical}
+
+/* icon-bar (barra de ícones inferior) */
+.icon-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;display:flex;gap:18px;z-index:1000}
+.icon-bar a{display:flex;flex-direction:column;align-items:center;gap:6px;background:rgba(255,255,255,0.04);padding:8px 12px;border-radius:10px;color:#fff;min-width:76px;text-align:center}
+.icon-bar a svg{width:22px;height:22px;fill:currentColor}
+.icon-bar a:hover{background:rgba(230,0,18,0.95);transform:translateY(-6px)}
+
+/* footer */
+footer{padding:24px;background:#050505;color:#bbb;text-align:center;margin-top:36px;font-size:14px}
+
+/* responsivo */
+@media(max-width:700px){
+  .banner{padding:28px;height:auto}
+  .texto h1{font-size:28px}
+  .icon-bar{left:12px;right:12px;transform:none;justify-content:space-between;bottom:12px}
+  .icon-bar a{min-width:48px;padding:6px}
+}
