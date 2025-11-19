@@ -535,3 +535,30 @@ textarea:focus {
   }
 }
 
+/* Ajustes para ecrãs pequenos (telemóveis) */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;   /* Logo e menu ficam em coluna */
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;   /* Links do menu ficam um em baixo do outro */
+    gap: 10px;                /* Espaço entre os links */
+  }
+
+  .test-ride-banner {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .test-ride-texto h1 {
+    font-size: 1.5em;         /* Título menor para caber melhor */
+  }
+
+  .test-ride-texto p {
+    font-size: 1em;           /* Texto ajustado */
+  }
+}
+
