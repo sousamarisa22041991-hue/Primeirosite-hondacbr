@@ -529,3 +529,9 @@ textarea:focus {
 }
 
 }
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+  }
+}
+
